@@ -1,11 +1,11 @@
-<?php include_once "adminincludes/admin_header.php"; ?>
+<?php include_once "includes/header.php"; ?>
 
     <div id="wrapper">
 
         <!-- Navigation -->
-        <?php include_once "adminincludes/admin_top_nav.php"; ?>
+        <?php include_once "includes/top_nav.php"; ?>
 
-        <?php include_once "adminincludes/admin_sidebar_nav.php"; ?>
+        <?php include_once "includes/sidebar_nav.php"; ?>
 
         <div id="page-wrapper">
 
@@ -26,6 +26,14 @@
                 </div>
                 <!-- /.row -->
 
+                <?php 
+                
+                    if ($database->connection) {
+                        echo "true";
+                    }
+
+                ?>
+
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
@@ -40,4 +48,4 @@
             </div>
             <!-- /.container-fluid -->
 
-<?php include_once "adminincludes/admin_footer.php"; ?>
+<?php include_once "includes/footer.php"; ?>
