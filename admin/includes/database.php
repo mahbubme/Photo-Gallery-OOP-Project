@@ -1,7 +1,5 @@
 <?php 
 
-require_once("config.php");
-
 class Database {
 
 	public $connection;
@@ -30,7 +28,7 @@ class Database {
 
 	}
 
-	public function confirm_query( $result ) {
+	private function confirm_query( $result ) {
 
 		if ( !$result ) {
 			die("Query Failed");

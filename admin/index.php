@@ -25,14 +25,11 @@
                     </div>
                 </div>
                 <!-- /.row -->
-
-                <?php 
                 
-                    $sql = "SELECT * FROM users WHERE id=1";
-                    $result = $database->query($sql);
-                    $user_found = mysqli_fetch_array($result);
+                <?php 
 
-                    echo $user_found['username'];
+                    $user = User::find_user_by_id(2);
+
 
                 ?>
 
