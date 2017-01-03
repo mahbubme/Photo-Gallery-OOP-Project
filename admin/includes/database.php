@@ -36,7 +36,7 @@ class Database {
 
 	}
 
-	public function escape_string() {
+	public function escape_string( $string ) {
 
 		$escaped_string = mysqli_real_escape_string( $this->connection, $string );
 

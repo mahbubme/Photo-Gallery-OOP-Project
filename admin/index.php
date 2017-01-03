@@ -1,5 +1,13 @@
 <?php include_once "includes/header.php"; ?>
 
+<?php 
+
+    if (!$session->is_signed_in()) {
+        redirect("login.php");
+    }
+
+?>
+
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -28,9 +36,7 @@
                 
                 <?php 
 
-                    $user = User::find_all_users(); 
-
-                    $picture = new Picture();
+                    $user = User::find_all_users();
 
                 ?>
 

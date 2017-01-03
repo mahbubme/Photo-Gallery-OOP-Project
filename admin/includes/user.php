@@ -38,15 +38,27 @@ class User {
 
 	}
 
+	public static function verify_user( $username, $password ) {
+
+		global $database;
+
+		$username = $database->escape_string($username);
+		$password = $database->escape_string($password);
+
+		$sql  = "SELECT * FROM users WHERE ";
+		$sql .= "username = '{$username}' ";
+		$sql .= "AND password = '{$password}' ";
+		$sql .= "LIMIT 1";
+
+		$the_result_array = self::find_this_query($sql);
+
+		return !empty($the_result_array) ? array_shift($the_result_array) : false;
+
+	}
+
 	public static function instantation( $the_record ) {
 
 		$the_object = new self;
-
-		// $the_object->id = $found_user['id'];
-		// $the_object->username = $found_user['username'];
-		// $the_object->password = $found_user['password'];
-		// $the_object->first_name = $found_user['first_name'];
-		// $the_object->last_name = $found_user['last_name'];
 
 		foreach ( $the_record as $the_attribute => $value ) {
 			
