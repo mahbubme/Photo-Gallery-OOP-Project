@@ -36,8 +36,9 @@
                 
                 <?php 
 
-                    $user = User::find_all_users();
+                    // $user = User::find_user_by_id(1);
 
+                    // $user->delete();
                 ?>
 
                 <div class="row">
