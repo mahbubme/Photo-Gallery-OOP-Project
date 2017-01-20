@@ -36,9 +36,41 @@
                 
                 <?php 
 
-                    // $user = User::find_user_by_id(1);
+                    // $user = User::find_user_by_id(4);
 
                     // $user->delete();
+
+                    // $user = User::find_user_by_id(4);
+
+                    // $user->username = "ashik";
+                    // $user->first_name = "Habibur";
+                    // $user->last_name = "Rahman";
+                    // $user->save(); 
+
+                    // $user = new User();
+
+                    // $user->username = "Suave";
+                    // $user->save();
+
+                    
+                    // $user = new User();
+
+                    // $user->username = "kazi";
+                    // $user->password = "passw";
+                    // $user->first_name = "Sudipto";
+                    // $user->last_name = "Sahin";
+
+                    // $user->create();
+
+
+                    // $user = User::find_user_by_id(7);
+
+                    // $user->username = "kaji";
+                    // $user->password = "pass";
+                    // $user->first_name = "Sodipto";
+                    // $user->last_name = "Saheen";
+
+                    // $user->update();
                 ?>
 
                 <div class="row">
