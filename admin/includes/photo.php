@@ -58,6 +58,13 @@
 		}
 
 
+		public function picture_path() {
+
+			return $this->upload_directory.DS.$this->filename;
+			
+		}
+
+
 		public function save() {
 
 			if ( $this->photo_id ) {

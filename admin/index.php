@@ -71,6 +71,29 @@
                     // $user->last_name = "Saheen";
 
                     // $user->update();
+
+                    // $users = User::find_all();
+
+                    // foreach ( $users as $user ) {
+                    //     echo $user->username;
+                    // }
+
+                    // $photos = Photo::find_all();
+ 
+                    // foreach ($photos as $photo ) {
+                    //     echo $photo->title;
+                    // }
+
+                    // $photo = new Photo();
+
+                    // $photo->title = "Just some test title";
+                    // $photo->size = 20;
+
+                    // $photo->create();
+
+                    echo INCLUDES_PATH;
+
+
                 ?>
 
                 <div class="row">

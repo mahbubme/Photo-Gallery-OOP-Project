@@ -1,5 +1,13 @@
 <?php include_once "includes/header.php"; ?>
 
+<?php if( !$session->is_signed_in() ) { redirect("login.php"); }; ?>
+
+<?php 
+
+    $photos = Photo::find_all();
+
+?>
+
     <div id="wrapper">
 
     <!-- Navigation -->
@@ -15,13 +23,33 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
-                        Photos <small>Statistics Overview</small>
+                        Photos <small>Subheading</small>
                     </h1>
-                    <ol class="breadcrumb">
-                        <li class="active">
-                            <i class="fa fa-dashboard"></i> Dashboard
-                        </li>
-                    </ol>
+
+                    <div class="col-md-12">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Photo</th>
+                                    <th>Id</th>
+                                    <th>File Name</th>
+                                    <th>Title</th>
+                                    <th>Size</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ( $photos as $photo ) : ?>
+                                    <tr>
+                                        <td><img src="<?php echo $photo->picture_path(); ?>" alt=""></td>
+                                        <td><?php echo $photo->id; ?></td>
+                                        <td><?php echo $photo->filename; ?></td>
+                                        <td><?php echo $photo->title; ?></td>
+                                        <td><?php echo $photo->size; ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!-- /.row -->
