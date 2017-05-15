@@ -40,7 +40,14 @@
                             <tbody>
                                 <?php foreach ( $photos as $photo ) : ?>
                                     <tr>
-                                        <td><img src="<?php echo $photo->picture_path(); ?>" alt=""></td>
+                                        <td>
+                                            <img src="<?php echo $photo->picture_path(); ?>" style="max-width: 220px;max-height: 220px" alt="">
+                                            <div class="pictures_link">
+                                                <a href="delete_photo.php?id=<?php echo $photo->id; ?>">Delete</a>
+                                                <a href="">Edit</a>
+                                                <a href="">View</a>
+                                            </div>
+                                        </td>
                                         <td><?php echo $photo->id; ?></td>
                                         <td><?php echo $photo->filename; ?></td>
                                         <td><?php echo $photo->title; ?></td>
