@@ -7,10 +7,12 @@
 	{
 		
 		protected static $db_table = "photos";
-		protected static $db_table_fields = array( 'id', 'title', 'description', 'filename', 'type', 'size' );	
+		protected static $db_table_fields = array( 'id', 'title', 'caption', 'description', 'alternate_text', 'filename', 'type', 'size' );	
 		public $id;
 		public $title;
+		public $caption;
 		public $description;
+		public $alternate_text;
 		public $filename;
 		public $type;
 		public $size;
@@ -127,7 +129,7 @@
 			}else{
 
 				return false;
-				
+
 			}
 
 		}
